@@ -1,3 +1,47 @@
 body {
-    background-color: skyblue;
+    background-color: white;
+}
+.structures{
+width: 100%;
+height: 840px;
+margin-top: 40px;
+}
+
+.structure-content{
+width: 695px;
+height: 659px;
+display: flex;
+flex-wrap: wrap;
+margin-left: 200px;
+justify-content: space-between;
+}
+
+.structure-card{
+width: 333px;
+height: 315px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+border: 1px solid gray;
+border-radius: 10px;    
+}
+
+.structure-card-header{
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 5px;
+    margin-bottom: 20px;
+
+}
+
+.structure-card-body p {
+ height: 120px;
+}
+
+.structure-card-footer a{
+    text-decoration: none;
+    color: black;
 }
