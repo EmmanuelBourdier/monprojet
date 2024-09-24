@@ -68,6 +68,11 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
+    // Copy images to the public directory
+    .copyFiles({
+        from: './assets/images',
+        to: 'images/[path][name].[ext]',
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
