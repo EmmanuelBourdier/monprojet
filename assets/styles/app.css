@@ -54,6 +54,10 @@ margin-bottom: 20px;
 .structure-card-footer{
     height: 30px;
 }
+.structure-card-footer-black a{
+    text-decoration: none;
+    color: white;
+}
 .structure-card-footer a{
     text-decoration: none;
     color: black;
@@ -67,4 +71,8 @@ margin-bottom: 20px;
 .card-blue{
     background-color: #6291bd;
     color:white;
+}
+
+.card-white{
+    background-color: white;
 }
