@@ -1,6 +1,16 @@
 body {
     background-color: white;
 }
+
+/* introduction */
+
+.img-intro{
+    width: 60%;
+    height: auto;
+}
+
+/* structure */
+
 .structures{
 width: 100%;
 height: 840px;
@@ -8,6 +18,8 @@ margin-top: 40px;
 background-image: url("../images/back-structure.jpg");
 background-repeat: none;
 background-size: cover;
+display: flex;
+align-items: center;
 }
 
 .structure-content{
@@ -16,16 +28,26 @@ flex-wrap: wrap;
 margin-left: 15%;
 justify-content: space-evenly;
 max-width: 659px;
+
 }
 
 @media screen and (max-width: 490px) {
+    .structures{
+        flex-direction: column;
+        background-image: none;
+        background-color: aquamarine;
+        height: auto;
+        margin-top: 0px;
+    }
+
     .structure-content {
-      margin-left: 0;
+      margin:20px 0;
     }
   }
 
 .structure-card{
 width: 315px;
+min-width: 315px;
 height: 315px;
 display: flex;
 flex-direction: column;
@@ -45,34 +67,77 @@ margin-bottom: 20px;
 
 }
 .structure-card-body{
-    height: 180px;
+    height: 160px;
     margin-top: 20px;
 }
 .structure-card-body p {
  height: 120px;
 }
 .structure-card-footer{
-    height: 30px;
+    height: 50px;
 }
-.structure-card-footer-black a{
-    text-decoration: none;
-    color: white;
-}
+
 .structure-card-footer a{
     text-decoration: none;
-    color: black;
+    color: black;   
 }
+
 .card-black{
     background-color: black;
     color:white;
-
+}
+.card-black .structure-card-header{
+    height: 10px;
 }
 
+.card-black .structure-card-body{
+    height: 225px;/*     250px    */
+}
+/*************************************/
+.card-black .structure-card-footer{
+    height: 50px;
+}
+/*************************************/
+.card-black a
+{
+    text-decoration: none;
+    color: white;
+    /*****************************************/
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+    color: white;
+    /*********************************************/
+}
+    /**********/
+    .card-black a:hover{
+        border-bottom: none;
+    } 
+    /***********/      
 .card-blue{
     background-color: #6291bd;
     color:white;
 }
 
+.card-blue a{
+border-bottom: 2px solid white;
+padding-bottom: 4px;
+color: white;
+}
+ .card-blue a:hover{
+border-bottom: none;
+ }
+
 .card-white{
     background-color: white;
 }
+/*       *********************************************/
+.card-white a {
+border-bottom: 2px solid  #3b7cba;
+padding-bottom: 4px;
+color: black;
+}
+
+.card-white a:hover {
+    border-bottom: none;
+}
+/*       *********************************************/
