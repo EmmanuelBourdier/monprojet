@@ -8,12 +8,25 @@ body {
     width: 60%;
     height: auto;
 }
+.intro-subtitle{
+    font-size: calc(2.5rem + .3vw);
+    color:gray;
+}
 
+.intro-title{
+    font-size: calc(3rem + 1.5vw);
+    font-family: "Anton",sans-serif; 
+}
+
+.intro-texte{
+    font-size: 18px;
+    margin-top: 30px;
+}
 /* structure */
 
 .structures{
 width: 100%;
-height: 840px;
+min-height: 840px;
 margin-top: 40px;
 background-image: url("../images/back-structure.jpg");
 background-repeat: none;
