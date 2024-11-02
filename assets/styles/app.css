@@ -355,3 +355,16 @@ color: black;
     }
 
 }
+
+/*formulaire*/
+.input-group-text{
+    padding: 10.8px 12px;
+}
+.form-group {
+    margin:10px 0px;
+}
+.btn-inscrire{
+    margin-top: 20px;
+    background-color: #0D5298;
+    color:white;
+}

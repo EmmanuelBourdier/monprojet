@@ -12,6 +12,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class RegisterUserType extends AbstractType
 {
@@ -29,6 +31,17 @@ class RegisterUserType extends AbstractType
         ])
         ->add('plainPassword', RepeatedType::class, [
             'type' => PasswordType::class,
+            'constraints' => [
+                    new NotBlank([
+                        'message' => 'Veuillez entrer un mot de passe',
+                    ]),
+                    new Length([
+                        'min' => 6,
+                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères',
+                        // max length allowed by Symfony for security reasons
+                        'max' => 4096,
+                    ]),
+                ],
             'first_options'  => [
                 'label' => 'Mot de passe',
                 'attr' => ['placeholder' => 'Entrez votre mot de passe',"id"=>"password"],
@@ -36,7 +49,7 @@ class RegisterUserType extends AbstractType
             ],
             'second_options' => [
                 'label' => 'Confirmer le mot de passe',
-                'attr' => ['placeholder' => 'Confirmez votre mot de passe',"id"=>"password2"],
+                'attr' => ['placeholder' => 'Confirmez votre mot de passe'],
             ],
             'invalid_message' => 'Les mots de passe ne correspondent pas',
             'mapped' => false,
@@ -44,7 +57,7 @@ class RegisterUserType extends AbstractType
 
         
         ->add('submit', SubmitType::class, [
-            'label' => 'Inscription', 'attr' => ['class' => 'btn btn-success']
+            'label' => 'Inscription', 'attr' => ['class' => 'btn-inscrire btn ']
         ])  
 
         ;
@@ -57,7 +70,8 @@ class RegisterUserType extends AbstractType
                 new UniqueEntity([
                     'entityClass' => User::class,
                     'fields' => ['email'],
-                ])
+                'message' => 'Cette adresse email est déjà utilisée.'
+                    ])
                 ],
             'data_class' => User::class,
         ]);
