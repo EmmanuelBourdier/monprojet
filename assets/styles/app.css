@@ -529,7 +529,7 @@ color: black;
     border: 1px solid  #3bb143;
     border-radius: 10px;
     width: 40vw;
-    text-align: center;    
+    justify-content: center;    
 }
 
 .doub-subtitle{
@@ -544,18 +544,24 @@ color: black;
     text-align: center;
 }
 .doub-card {
-    /*flex-direction: column;
-    flex-wrap: nowrap;*/
-    width: 300px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
     
 }
 
+.doub-left, .doub-right{
+    width: 50%;
+    text-align: center;
+}
+
 .doub-card-img{
-    height: 100%;
+    height: auto;
     width: 300px;
 }
 
 .doub-card-body{
-    width: 300px;
-
+    display: flex;
+    justify-content: center;
 }
