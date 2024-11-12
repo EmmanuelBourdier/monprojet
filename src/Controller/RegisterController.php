@@ -20,7 +20,7 @@ class RegisterController extends AbstractController
                 $form->handleRequest($request);
                 if($form->isSubmitted() && $form->isValid()){
                     $user = $form->getData();
-                   
+                    $user->setRoles(['ROLE_USER']);
                     //figer les données
                     $entityManagerInterface->persist($user);
                     //envoyer les données

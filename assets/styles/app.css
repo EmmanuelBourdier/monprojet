@@ -220,19 +220,10 @@ color: black;
      width: 95%;
      justify-content: space-between;
      margin: 20px auto;
-     
-        /*mes ajouts
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crée des colonnes flexibles 
-        gap: 10px; /* Espace entre les divs */
   }
 
   .items-prix {
-    
-    /*width:100px;
-    /* mes ajouts*/
-    flex: 1 1 80px;
-    /**fin ajouts**/       
+    flex: 1 1 80px;       
     background-color: white;
     border-radius: 10px;
     color:black;
@@ -257,7 +248,6 @@ color: black;
 
 .prix-cube {
     margin-bottom: 40px;
-    /*background-color: rgb(231, 126, 50);*/
     width: 400px;
     height: auto;/*avant :250px mais les div enfant sortent*/
     border-radius: 5px;
@@ -269,7 +259,6 @@ color: black;
 .prix-header{
    height: 100px;
    width: 100%;
-   /*mes ajouts*/
    padding:0 20px;
 }
 
@@ -281,13 +270,15 @@ color: black;
    
     background-color: #3bb143;
 }
-/*mes ajouts*/
+
 .prix-text-bold-ess { 
     color: white;
 }
+
 .prix-text {
     padding: 5px;
 }
+
 .prix-text-ess{
     color: white;
     margin:10px;
@@ -367,4 +358,204 @@ color: black;
     margin-top: 20px;
     background-color: #0D5298;
     color:white;
+}
+/*plafond*/
+
+.plaf{    
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+.plaf-title{
+    display: flex;
+    font-size: calc(3rem + 1.5vw);
+    font-family: "Anton",sans-serif;
+    margin: 40px auto;
+        border: 1px solid  #0D5298;
+        border-radius: 10px;
+        width: 40vw;
+        text-align: center;
+}
+
+.plaf-intro-texte{
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.plaf-jumbotron{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 300px;
+    margin : 50px 0;
+
+}
+
+.plaf-jumbotron-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 65%;
+
+}
+
+.plaf-subtitle{
+    font-size: calc(1.7rem + .3vw);
+    color:#6291bd;
+    margin-bottom: 30px;
+}
+
+.plaf-texte{
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+.plaf-jumbotron-right{
+    width: 35%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.img-plaf{
+    width: 250px;
+    height: auto;
+}
+
+/*section plaf card*/
+
+.plaf-cards{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+    width: 100%;
+    margin:13px;
+}
+
+.plaf-cards-texte{
+    font-size: 18px;
+}
+.plaf-cards-gallery{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 45px;
+}
+.plaf-card{
+    width: 350px;
+    display: flex ;
+    flex-direction: column;
+}
+
+.plaf-card-header{
+    width: 350px;
+    height: auto;
+    text-align: center;
+}
+
+.plaf-card-body{
+    text-align: center;
+    width: 350px;
+
+}
+.plaf-card-body p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.plaf-card-img{
+    height: 100%;
+    width: 316px;
+}
+
+@media screen and (max-width:420px){
+
+    .plaf{
+        padding: 5px;
+        
+    }
+    .plaf-title{
+        margin:20px auto;
+        width: 80vw;
+    }
+
+    .plaf-jumbotron{
+        flex-wrap: wrap;
+        margin: 30px 0;
+        height: auto;
+    }
+    .plaf-jumbotron-left{
+        width: 100%;
+    }
+    .plaf-jumbotron-right{
+        width: 100%;
+    }
+    .plaf-card, .plaf-card-header, .plaf-card-body, .plaf-card-img{
+        width: 310px;
+
+    }
+    .plaf-cards-gallery{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (min-width:420px) and (max-width:1280px){
+    .plaf-cards-gallery{
+        justify-content: space-between;
+        margin: 30px;
+    } 
+}
+
+/*mes ajouts*/
+/*fin de mes ajouts*/
+
+/*Doublages*/
+
+.doub {
+    padding: 15px;
+}
+
+.doub-intro{
+
+}
+
+.doub-title {
+    display: flex;
+    font-size: calc(3rem + 1.5vw);
+    font-family: "Anton",sans-serif;
+    margin: 40px auto;
+    border: 1px solid  #3bb143;
+    border-radius: 10px;
+    width: 40vw;
+    text-align: center;    
+}
+
+.doub-subtitle{
+    font-size: calc(1.7rem + .3vw);
+    color:#3bb143;
+    margin-bottom: 30px;
+}
+
+.doub-intro-texte{
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+.doub-card {
+    /*flex-direction: column;
+    flex-wrap: nowrap;*/
+    width: 300px;
+    
+}
+
+.doub-card-img{
+    height: 100%;
+    width: 300px;
+}
+
+.doub-card-body{
+    width: 300px;
+
 }

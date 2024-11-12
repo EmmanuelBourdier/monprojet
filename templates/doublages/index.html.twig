@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Doublages{% endblock %}
+
+{% block body %}
+<main class="doub">
+    <div class="doub-intro">
+        <h1 class="doub-title"> Les Doublages</h1>
+        <p class="doub-intro-texte" >Le doublage consiste en l’ajout de cloisons ou de contre-cloisons, qu'elles soient isolées ou non,
+         sur un mur brut. Ce procédé permet d’améliorer l’aspect de la surface murale en la rendant propre et lisse, prête à être peinte ou revêtue d'un autre type de finition.Il en existe deux types</p>
+        
+        <h2>Avantages du doublage</h2>
+        <ul>
+            <li><strong>Isolation thermique et acoustique</strong> : En fonction des matériaux choisis, le doublage peut offrir une meilleure isolation.</li>
+            <li><strong>Finition lisse et esthétique</strong> : Le doublage permet de masquer les irrégularités et les imperfections d'un mur brut, obtenant une surface uniforme.</li>
+            <li><strong>Préparation pour la peinture ou les revêtements</strong> : Le mur doublé est prêt à recevoir une couche de peinture ou d'autres types de revêtements muraux (papier peint, etc.).</li>
+        </ul>
+        <p>Le choix du type de doublage dépendra des besoins spécifiques en isolation et de l’état du mur d’origine.</p>
+    </div>
+    <section>
+        <h2 class="doub-subtitle"><em>Doublage Collé</em></h2>
+        <p class="doub-texte">Ce type de doublage consiste à coller directement des  plaques de plâtre ou de complexe isolant(plaque plus isolant solidarisés) sur le mur avec un mortier-colle. C'est une solution rapide qui assure une bonne isolation thermique et acoustique selon les matériaux choisis.</li></p>
+            <div class="doub-card">   
+                <div class="doub-left">
+                        <img class="doub-card-img" src="build/images/rampant.jpg" alt="plafond rampant comble" />
+                    <div class="doub-card-body">
+                        <p>Doublage sur mur par simple plaque. </p>
+                    </div>
+                </div>
+                <div class="doub-right">
+                        <img class="doub-card-img" src="build/images/DoublageComplexe.jpg" alt="doublage complexe calibel" />
+                    <div class="doub-card-body">
+                        <p>Doublage par complexe type"calibel".</P>
+                    </div>
+                </div>
+            </div>   
+    </section>
+    <section>
+        <h2 class="doub-subtitle"><em>Doublage sur Ossature</em></h2>
+        <p class="doub-texte">Dans ce cas, une ossature métallique (ou en bois mais non considérer ici dans nos calcul de doublage) est installée à quelques centimètres du mur. Des plaques de plâtre y sont alors fixer. L'espace entre le mur et la cloison permet de rajouter des matériaux isolants, ce qui améliore les performances énergétiques et acoustiques de la pièce. </li>
+            </p>
+    </section>
+
+</main>
+{% endblock %}

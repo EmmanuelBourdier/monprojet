@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plafonds{% endblock %}
+
+{% block body %}
+<main class="plaf">
+ <h1 class="plaf-title">les Plafonds</h1>
+  <p class="plaf-intro-texte">En fonction des dimensions de la pièce et du type support (charpente en bois, dalle béton ou autre..) plusieurs types de ferraillage sont possible.<br> Il existe trois principaux types de ferraillage pour soutenir un plafond en plaques de plâtre: les fourrures, les montants ou une ossature primaire. 
+  </p>
+    <section class="plaf-jumbotron">
+        <div class="plaf-jumbotron-left">
+            <h2 class="plaf-subtitle"><em>Fourrures</em></h2>
+            <p class="plaf-texte">Il est très repandu sur les charpentes style fermette.<br> On trouve ce style de ferraillage dans la plupart des constructions individuelles,<br> "par expérience un entraxe de 50 cm est est préférable lors du ferraillage afin d’éviter que le plaque se déforme au  cours des années".<br></p>
+        </div>
+        <div class="plaf-jumbotron-right">
+            <img class="img-plaf " src="build/images/LogPlaf3.jpg" alt="plafond sur f530" />
+        </div>
+    </section>
+    <section class="plaf-cards">
+        <p class="plaf-cards-texte">L’ossature sur fourrures type "f 530" est également appropriée au ferraillage des plafonds rampants ou encore des plafonds cintrés permettant une finition disign et original.</p> 
+            <div class="plaf-cards-gallery">
+                <div class="plaf-card">
+                    <div class="plaf-card-header">
+                    <img class="plaf-card-img" src="build/images/rampant.jpg" alt="plafond rampant comble" />
+                    </div>
+                    <div class="plaf-card-body">
+                    <p>Rampant sur f 530 dans des combles amenageable. </p>
+                    </div>
+                </div>
+                <div class="plaf-card">
+                    <div class="plaf-card-header">
+                    <img class="plaf-card-img" src="build/images/plafond cintre.jpg" alt="plafond cintre sur f530" />
+                    </div>
+                    <div class="plaf-card-body">
+                    <p>Plafond cintré realiser sur ossature f 530.</P>
+                    </div>
+                </div>
+            </div>    
+    </section>
+    <section class="plaf-jumbotron">
+        <div class="plaf-jumbotron-left">
+            <h2 class="plaf-subtitle"><em>Montants</em></h2>
+            <p class="plaf-texte">On parle également de plafond « autoportant », un type de plafond particulièrement adapté pour les espaces d'une largeur inférieure à 4 mètres.
+             Ce type de structure est idéal pour des projets de rénovation dans des pièces telles qu'une chambre, une salle de bain, ou un couloir.<br>
+L'ossature à montants de type "M 48/35" convient généralement aux plafonds de petite largeur.<br> Pour des plafonds autoportants jusqu'à une largeur maximale de 4,25 mètres,
+ il est recommandé d'utiliser des montants "M 100/50" avec un entraxe de 50 cm.
+Pour plus d'informations sur les portées et les ossatures adaptées,
+ consultez notre page <a class="plaf-link" href="#">Information technique</a>.</p><br>
+        </div>
+        <div class="plaf-jumbotron-right">
+            <img class="img-plaf " src="build/images/plafond autoportant sur montant double.jpg" alt="plafond sur m48/35" />
+        </div>
+    </section>
+    <section class="plaf-jumbotron">
+        <div class="plaf-jumbotron-left">
+            <h2 class="plaf-subtitle"><em>Ossature primaire.</em></h2>
+            <p class="plaf-texte">Idéal pour les accroche compliquer et haute par rapport au plafond fini voulu, très fréquent pour des plafonds de grande surface. Usage plus fréquent chez les professionnels.</p>
+        </div>
+        <div class="plaf-jumbotron-right">
+            <img class="img-plaf " src="build/images/plaf primaire.jpg" alt="plafond sur primaire" />
+        </div>
+    </section>   
+</main>
+{% endblock %}
