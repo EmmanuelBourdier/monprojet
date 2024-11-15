@@ -2,6 +2,30 @@ body {
     background-color: white;
 }
 
+.navbar-brand{
+    font-size: 35px;
+}
+
+ul.navbar-nav {
+    margin-right: 80px !important;
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      flex-basis: 50% !important;
+      flex-grow: 0 !important;
+      justify-content: center !important;
+      margin: 0 auto; /* Center the navbar-collapse */
+    }
+  }
+  
+  .transparent {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
 /* introduction */
 
 .img-intro{
@@ -21,6 +45,14 @@ body {
 .intro-texte{
     font-size: 18px;
     margin-top: 30px;
+}
+
+@media screen and (min-width:1440px)
+{ .section-intro {
+    width: 75% !important;
+    margin: 3rem auto !important;
+}
+    
 }
 /* structure */
 
@@ -376,6 +408,10 @@ color: black;
         border-radius: 10px;
         width: 40vw;
         text-align: center;
+        /*ajout*/
+        justify-content: center;
+        /*ajout*/
+        
 }
 
 .plaf-intro-texte{
@@ -405,6 +441,7 @@ color: black;
 .plaf-subtitle{
     font-size: calc(1.7rem + .3vw);
     color:#6291bd;
+    color:#0D5298;
     margin-bottom: 30px;
 }
 
@@ -508,8 +545,6 @@ color: black;
     } 
 }
 
-/*mes ajouts*/
-/*fin de mes ajouts*/
 
 /*Doublages*/
 
@@ -529,7 +564,10 @@ color: black;
     border: 1px solid  #3bb143;
     border-radius: 10px;
     width: 40vw;
-    justify-content: center;    
+    justify-content: center;
+    /*ajout*/
+    text-align: center;
+    /*ajout*/    
 }
 
 .doub-subtitle{
@@ -557,11 +595,37 @@ color: black;
 }
 
 .doub-card-img{
-    height: auto;
-    width: 300px;
+    /*mes ajouts*/
+    height: 250px;
+
+    /*fin mes ajouts*/
+   /* height: auto;
+    width: 300px; */
 }
 
 .doub-card-body{
     display: flex;
     justify-content: center;
+}
+
+/*mes ajouts*/
+/*fin de mes ajouts*/
+.doub-oss-card{
+    display: flex;
+    width:100%;
+    flex-wrap: nowrap;
+}
+
+.doub-oss-left, .doub-oss-right{
+ width:60%;
+ text-align: center;
+}
+
+.doub-oss-card-img{
+    height: 250px;
+   /* width: auto;*/
+}
+
+.doub-oss-card-body{
+
 }
