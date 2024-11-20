@@ -4,6 +4,8 @@ body {
 
 .navbar-brand{
     font-size: 35px;
+    color:#3bb143;
+    /*color:#55d737;*/
 }
 
 ul.navbar-nav {
@@ -563,7 +565,7 @@ color: black;
     margin: 40px auto;
     border: 1px solid  #3bb143;
     border-radius: 10px;
-    width: 40vw;
+    width: 70vw; /*avant 40vw*/
     justify-content: center;
     /*ajout*/
     text-align: center;
@@ -628,4 +630,52 @@ color: black;
 
 .doub-oss-card-body{
 
+}
+
+/*cloison*/
+
+.cloi {
+    padding: 15px;
+}
+
+.cloi-title {
+    display: flex;
+    font-size: calc(3rem + 1.5vw);
+    font-family: "Anton",sans-serif;
+    margin: 40px auto;
+    border: 1px solid  black;
+    border-radius: 10px;
+    width: 55vw;
+    justify-content: center;
+    text-align: center; 
+}
+
+.cloi-subtitle{
+    font-size: calc(1.7rem + .3vw);
+    margin-bottom: 30px; 
+}
+
+.cloi-oss-metal{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.cloi-left, .cloi-right{  
+    height: 300px;
+    text-align: center;
+}
+
+.cloi-car {
+    display: flex;
+}
+
+.cloi-card-img{
+    height: 250px;
+
+}
+
+.cloi-card-body{
+    justify-items: center;
 }
