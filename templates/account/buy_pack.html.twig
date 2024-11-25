@@ -1,9 +1,30 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Buy Pack</h1>
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <button class="btn">Buy</button>
-    {{ form_end(form) }}
+    <div class="prix-cube pack d-flex flex-column text-center">
+        <div class="prix-header">
+            <h3 class="prix-text-bold">Packs</h3>
+            <p class="prix-text">Payez en une fois de 1 à 10 calculs.</p>
+        </div>
+        {{ form_start(form) }}
+        <div class="prix-liste">
+            <div class="items-prix">
+                
+                <p>A l'unité <br><span class="prix">1.5 €</span></p>
+                {{ form_widget(form.pack.0) }}
+            </div>
+            <div class="items-prix">
+               
+                <p>Pack de 3 <br><span class="prix">5 €</span></p>
+                 {{ form_widget(form.pack.1) }}
+            </div>
+            <div class="items-prix">
+                
+                <p>Pack de 10 <br><span class="prix">10 €</span></p>
+                {{ form_widget(form.pack.2) }}
+            </div>
+        </div>
+        <button type="submit">Acheter</button>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}

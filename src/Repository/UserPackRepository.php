@@ -16,28 +16,14 @@ class UserPackRepository extends ServiceEntityRepository
         parent::__construct($registry, UserPack::class);
     }
 
-    //    /**
-    //     * @return UserPack[] Returns an array of UserPack objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('u')
-    //            ->andWhere('u.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('u.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
-
-    //    public function findOneBySomeField($value): ?UserPack
-    //    {
-    //        return $this->createQueryBuilder('u')
-    //            ->andWhere('u.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    public function findOneByCredit($userId): ?UserPack
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.user = :val')
+            ->andWhere('u.credit > 0')
+            ->setParameter('val', $userId)
+            ->getQuery()
+            ->getOneOrNullResult()
+       ;
+   }
 }

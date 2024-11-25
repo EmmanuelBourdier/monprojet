@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserPackRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: UserPackRepository::class)]
@@ -22,7 +23,7 @@ class UserPack
     private ?Pack $pack = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $usedQuantity = null;
+    private ?int $credit = null;
 
     public function getId(): ?int
     {
@@ -53,15 +54,27 @@ class UserPack
         return $this;
     }
 
-    public function getUsedQuantity(): ?int
+    public function getCredit(): ?int
     {
-        return $this->usedQuantity;
+        return $this->credit;
     }
 
-    public function setUsedQuantity(?int $usedQuantity): static
+    public function setCredit(?int $credit): static
     {
-        $this->usedQuantity = $usedQuantity;
+        $this->credit = $credit;
 
         return $this;
     }
+
+    public function setPackById(int $packId, EntityManagerInterface $entityManager): static
+    {
+        $pack = $entityManager->getRepository(Pack::class)->find($packId);
+        if ($pack) {
+            $this->pack = $pack;
+        } else {
+            throw new \InvalidArgumentException("Invalid pack ID");
+        }
+        return $this;
+    }
+
 }

@@ -16,6 +16,9 @@
 <a href="{{ path('admin')}}"><p>Administration</p></a>
 
 {% endif %}
+        <h2 class="text-center">Pack Information</h2>
+        <p>Pack Actuel: {{ currentPack ? currentPack.name : 'Pas de pack actuellement' }}</p>
+        <p>credit: {{ userPack ? userPack.credit : 'Pas de pack actuellement' }}</p>
         <a href="{{ path('app_logout') }}" class="btn btn-danger">Me déconnecter</a>
          <a href="{{ path('app_account_modify_pwd') }}" class="btn btn-success">Modifier Mot de Passe</a>
     </div>

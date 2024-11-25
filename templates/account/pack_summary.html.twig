@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h1>Résumé du Pack</h1>
+<p>Nom: {{ pack.name }}</p>
+<p>Prix: {{ pack.price }}</p>
+
+<form action="{{ path('app_account_payment', {'packId': pack.id}) }}" method="POST">
+    <button type="submit">Checkout avec Stripe</button>
+</form>
+{% endblock %}
