@@ -17,7 +17,9 @@
             <input type="password" class='form-control' id="password" name="_password">
 
             
-            <input type="hidden" name="_target_path" value="{{ path('app_account') }}"> 
+            {# Conditionally set the _target_path hidden input field #}
+            {% set targetPath = app.session.get('_security.main.target_path') %}
+            <input type="hidden" name="_target_path" value="{{ targetPath ?: path('app_account') }}"> 
 
             <button type="submit" class="btn btn-inscrire " >Me connecter</button>
         </form>         

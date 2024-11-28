@@ -46,9 +46,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(targetEntity: UserPack::class, mappedBy: 'user', orphanRemoval: true)]
     private Collection $userPacks;
 
+    /**
+     * @var Collection<int, UserAbonnement>
+     */
+    #[ORM\OneToMany(targetEntity: UserAbonnement::class, mappedBy: 'user', orphanRemoval: true)]
+    private Collection $userAbonnements;
+
     public function __construct()
     {
         $this->userPacks = new ArrayCollection();
+        $this->userAbonnements = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -174,6 +181,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($userPack->getUser() === $this) {
                 $userPack->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, UserAbonnement>
+     */
+    public function getUserAbonnements(): Collection
+    {
+        return $this->userAbonnements;
+    }
+
+    public function addUserAbonnement(UserAbonnement $userAbonnement): static
+    {
+        if (!$this->userAbonnements->contains($userAbonnement)) {
+            $this->userAbonnements->add($userAbonnement);
+            $userAbonnement->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserAbonnement(UserAbonnement $userAbonnement): static
+    {
+        if ($this->userAbonnements->removeElement($userAbonnement)) {
+            // set the owning side to null (unless already changed)
+            if ($userAbonnement->getUser() === $this) {
+                $userAbonnement->setUser(null);
             }
         }
 

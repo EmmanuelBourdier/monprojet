@@ -19,9 +19,9 @@ class PaymentController extends AbstractController
         
         $pack = $entityManager->getRepository(Pack::class)->find($packId);
 
-        Stripe::setApiKey('sk_test_51PfzMKRu9jpQSGx5eUnNGofVbwj9p30KV6QZEaZqZgcUcXwhbtr2Qy7MoRtEZv2qkcSG7fsdKHkbniGhlrYZoU4u00ec3NSwFk');
+        Stripe::setApiKey('sk_test_51QPSD4CkmfYHbFpEMd0aqMKo2aakRutcMVdFnSmCXy67yCTycqG2NpNFgm71B9K1LSly2IdFDZgjPaUV2o76wl9P008uOvzmEn');
         $YOUR_DOMAIN = 'http://127.0.0.1:8000';
-         $successUrl = $this->generateUrl('app_account_pack_confirm', ['packId' => $packId], UrlGeneratorInterface::ABSOLUTE_URL);
+         $successUrl = $this->generateUrl('app_pack_confirm', ['packId' => $packId], UrlGeneratorInterface::ABSOLUTE_URL);
         $cancelUrl = $YOUR_DOMAIN . '/cancel.html';
         $checkout_session = Session::create([
         'line_items' => [[

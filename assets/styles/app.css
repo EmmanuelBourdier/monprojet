@@ -638,6 +638,10 @@ color: black;
     padding: 15px;
 }
 
+.cloi-intro{
+    
+}
+
 .cloi-title {
     display: flex;
     font-size: calc(3rem + 1.5vw);
@@ -658,34 +662,47 @@ color: black;
 
 .cloi-subtitle{
     font-size: calc(1.7rem + .3vw);
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
+    color:#0D5298; 
 }
 
+.cloi-card{
+    display:flex ;
+    flex-direction: column;
+}
+
+/*
+.cloi-sub2{
+    display: flex;
+    flex-direction: column;
+
+}
+*/
 .cloi-oss-metal{
     display: flex;
-    flex-direction: row;
+    /*flex-direction: row;*/
     width: 100%;
     flex-wrap: nowrap;
+    /*align-items:center;*/
 }
 
-.cloi-left, .cloi-right{  
-    height: 300px;
-    text-align: center;
+.cloi-oss-metal-left{
+
 }
 
-.cloi-car {
-    display: flex;
-}
-
-.cloi-card-img{
+.cloi-left-img, .cloi-right-img{  
     height: 250px;
-
+    width:80%;
+    text-align: center;
 }
 
 .cloi-card-body{
     justify-items: center;
 }
 
+.cloi-right-img{
+    display: ;
+}
 
 /*prix*/
 
