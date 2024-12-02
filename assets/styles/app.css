@@ -665,7 +665,7 @@ color: black;
     margin-bottom: 30px;
     color:#0D5298; 
 }
-
+/*
 .cloi-card{
     display:flex ;
     flex-direction: column;
@@ -680,14 +680,16 @@ color: black;
 */
 .cloi-oss-metal{
     display: flex;
-    /*flex-direction: row;*/
+    flex-direction: column;
     width: 100%;
     flex-wrap: nowrap;
     /*align-items:center;*/
 }
 
 .cloi-oss-metal-left{
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .cloi-left-img, .cloi-right-img{  
@@ -697,13 +699,30 @@ color: black;
 }
 
 .cloi-card-body{
-    justify-items: center;
+    text-align: center;
 }
 
 .cloi-right-img{
-    display: ;
+   
 }
 
+/*test
+.container {
+    text-align: center; /* Centre le contenu horizontalement 
+    margin: 20px auto;
+}
+.image {
+    display: block;
+    margin: 0 auto; /* Centre l'image 
+    max-width: 100%; /* Gère les tailles d'image responsive 
+    height: auto;
+}
+.text {
+    margin-top: 10px; /* Ajoute un espace entre l'image et le texte 
+    font-size: 16px;
+    color: #333;
+}
+/*test*/
 /*prix*/
 
 .tarif{

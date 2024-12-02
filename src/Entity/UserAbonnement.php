@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UserAbonnementRepository;
 use Doctrine\ORM\Mapping as ORM;
+use DateTimeImmutable;
 
 #[ORM\Entity(repositoryClass: UserAbonnementRepository::class)]
 class UserAbonnement
@@ -68,13 +69,15 @@ class UserAbonnement
         return $this;
     }
 
-    public function getFinishedAt(): ?\DateTimeImmutable
+    public function getFinishedAt(): DateTimeImmutable
     {
         return $this->finishedAt;
+       
     }
 
-    public function setFinishedAt(\DateTimeImmutable $finishedAt): static
+    public function setFinishedAt(): DateTimeImmutable
     {
+        $finishedAt=$this->createdAt->modify("+{$this->duration} days");
         $this->finishedAt = $finishedAt;
 
         return $this;
