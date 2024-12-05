@@ -16,6 +16,18 @@ class UserAbonnementRepository extends ServiceEntityRepository
         parent::__construct($registry, UserAbonnement::class);
     }
 
+
+    public function findOneById($userId): ?UserAbonnement
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.user = :val')
+            ->andWhere('u.finishedAt > :now')
+           ->setParameter('val', $userId)
+            ->setParameter('now', new \DateTimeImmutable())
+            ->getQuery()
+            ->getOneOrNullResult()
+       ;
+   }
     //    /**
     //     * @return UserAbonnement[] Returns an array of UserAbonnement objects
     //     */

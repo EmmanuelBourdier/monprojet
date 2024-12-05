@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Pack;
+use App\Entity\UserAbonnement;
 use App\Entity\UserPack;
 use App\Form\BuyPackType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -76,6 +77,15 @@ public function buyPack(Request $request, EntityManagerInterface $entityManager,
     if ($userPack) {
         {
             $this->addFlash('error', 'Vous avez déjà un pack en cours d\'utilisation');
+            return $this->redirectToRoute('app_account');
+        }
+    }
+
+    $userAbonnement = $entityManager->getRepository(UserAbonnement::class)->findOneById($userId);
+
+    if ($userAbonnement) {
+        {
+            $this->addFlash('error', 'Vous avez déjà un Abonnement en cours d\'utilisation');
             return $this->redirectToRoute('app_account');
         }
     }

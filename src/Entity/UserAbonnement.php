@@ -75,9 +75,8 @@ class UserAbonnement
        
     }
 
-    public function setFinishedAt(): DateTimeImmutable
+    public function setFinishedAt(\DateTimeImmutable $finishedAt): static
     {
-        $finishedAt=$this->createdAt->modify("+{$this->duration} days");
         $this->finishedAt = $finishedAt;
 
         return $this;

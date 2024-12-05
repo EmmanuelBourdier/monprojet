@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="prix-cube pack d-flex flex-column text-center">
+        <div class="prix-header">
+            <h3 class="prix-text-bold">Abonnement</h3>
+            <p class="prix-text">Payez un abonnement</p>
+        </div>
+        {{ form_start(form) }}
+        <div class="prix-liste">
+            <div class="items-prix">
+                
+                <p>une semaine <br><span class="prix">1.5 €</span></p>
+                {{ form_widget(form.abonnement.0) }}
+            </div>
+            <div class="items-prix">
+               
+                <p>1 mois <br><span class="prix">5 €</span></p>
+                 {{ form_widget(form.abonnement.1) }}
+            </div>
+            <div class="items-prix">
+                
+                <p>6 mois <br><span class="prix">10 €</span></p>
+                {{ form_widget(form.abonnement.2) }}
+            </div>
+            </div>
+        <button type="submit">Acheter</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

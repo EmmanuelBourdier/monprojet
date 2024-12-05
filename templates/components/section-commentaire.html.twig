@@ -1,0 +1,23 @@
+<section>
+  <figure class="text-center container py-5 bg-grey mt-5">
+    <div class="justyfy-content-center display-3">Avis Clients</div>
+    {% for commentaire in commentaires %}
+      <blockquote class="blockquote">
+        <p class="mb-0">Mr {{ commentaire.nom }} , {{ commentaire.commentaire }}</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <cite title="Source Title">{{ commentaire.publie|date('d-m-Y') }}</cite>
+        <p>
+          <div class="star-rating justy
+fy-content-center">
+            <div {{ react_component('stars', { notation: commentaire.note }) }}></div>
+          </div>
+          <strong>Note : {{ commentaire.note }}/5</strong>
+        </p>
+      </figcaption>
+    {% endfor %}
+    <div class="my-5 mx-auto w-25 justify-content-center">
+      <button class="btn btn-lg btn-dark d-flex" type="button"><a href="{{ path('app_commentaire') }}" class="btn btn-dark my-1">Votre avis nous intéresse ! Laisser un commentaire.</a></button>
+    </div>
+  </figure>
+  </section>

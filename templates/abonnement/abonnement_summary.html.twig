@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h1>Résumé de l'abonnement</h1>
+<p>Nom: {{ abonnement.name }}</p>
+<p>Prix: {{ abonnement.price }}</p>
+<p>Durée: {{ abonnement.duration }}</p>
+
+<form action="{{ path('app_account_paymentAbo', {'abonnementId': abonnement.id}) }}" method="POST">
+    <button type="submit">Checkout avec Stripe</button>
+</form>
+{% endblock %}

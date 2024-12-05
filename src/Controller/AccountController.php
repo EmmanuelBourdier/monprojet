@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Pack;
+use App\Entity\UserAbonnement;
 use App\Entity\UserPack;
 use App\Form\BuyPackType;
 use App\Form\PasswordUserType;
@@ -33,7 +34,10 @@ class AccountController extends AbstractController
         ]);
         $currentPack = $userPack ? $userPack->getPack() : null;
 
-        return $this->render('account/index.html.twig', ['userPack' => $userPack,'currentPack' => $currentPack]);
+        $userAbonnement = $entityManager->getRepository(UserAbonnement::class)->findOneById($userId);
+
+        $currentAbonnement = $userAbonnement ? $userAbonnement->getAbonnement() : null;
+        return $this->render('account/index.html.twig', ['userPack' => $userPack,'currentPack' => $currentPack, 'userAbonnement'=> $userAbonnement, 'currentAbonnement' => $currentAbonnement]);
     }
 
      #[Route('/compte/modifier-mot-de-passe', name: 'app_account_modify_pwd')]

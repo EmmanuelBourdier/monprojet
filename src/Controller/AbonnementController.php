@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Abonnement;
+use App\Entity\UserPack;
 use App\Entity\UserAbonnement;
 use App\Form\BuyAbonnementType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -31,10 +32,10 @@ class AbonnementController extends AbstractController
 
         $userId = $user->getId();
         //dd($userId);
-        $userAbonnement = $entityManager->getRepository(UserAbonnement::class)->findOneByTime([
+        $userAbonnement = $entityManager->getRepository(UserAbonnement::class)->findOneById([
             'userId' => $userId
         ]);
-        //dd($userPack);
+        //dd($userAbonnement);
 
        
         $finishedAt= $userAbonnement->getFinishedAt();
@@ -56,7 +57,7 @@ class AbonnementController extends AbstractController
 
 
 #[Route('/acheter-abonnement', name: 'app_abonnement_buy')]
-public function buyPack(Request $request, EntityManagerInterface $entityManager,SessionInterface $session): Response
+public function buyAbonnement(Request $request, EntityManagerInterface $entityManager,SessionInterface $session): Response
 {
         $user = $this->getUser();
 
@@ -68,11 +69,22 @@ public function buyPack(Request $request, EntityManagerInterface $entityManager,
 
         $userId = $user->getId();
 
-        $userAbonnement = $entityManager->getRepository(UserAbonnement::class)->findOneByTime($userId);
+        $userAbonnement = $entityManager->getRepository(UserAbonnement::class)->findOneById($userId);
 
     if ($userAbonnement) {
         {
             $this->addFlash('error', 'Vous avez déjà un Abonnement en cours d\'utilisation');
+            return $this->redirectToRoute('app_account');
+        }
+    }
+
+       $userPack = $entityManager->getRepository(UserPack::class)->findOneByCredit([
+            'userId' => $userId
+        ]);
+
+         if ($userPack) {
+        {
+            $this->addFlash('error', 'Vous avez déjà un pack en cours d\'utilisation');
             return $this->redirectToRoute('app_account');
         }
     }
@@ -108,30 +120,32 @@ public function abonnementSummary(Request $request, EntityManagerInterface $enti
     ]);
 }
 
-#[Route('/acheter-pack/confirmation', name: 'app_pack_confirm')]
-public function packConfirm(Request $request, EntityManagerInterface $entityManager): Response
+#[Route('/acheter-abonnement/confirmation', name: 'app_abonnement_confirm')]
+public function abonnementConfirm(Request $request, EntityManagerInterface $entityManager): Response
 {
-    $packId = $request->query->get('packId');
-    $pack = $entityManager->getRepository(Pack::class)->find($packId);
+    $abonnementId = $request->query->get('abonnementId');
+    $abonnement = $entityManager->getRepository(Abonnement::class)->find($abonnementId);
 
-    if (!$pack) {
-        throw $this->createNotFoundException('Pack not found');
+    if (!$abonnement) {
+        throw $this->createNotFoundException('Abonnement not found');
     }
 
     $user = $this->getUser();
 
-   
-   
+    $userAbonnement = new UserAbonnement();
+    $userAbonnement->setAbonnement($abonnement);
+    $userAbonnement->setUser($user);
+    $userAbonnement->setCreatedAt(
+        new DateTimeImmutable()
+    );
+    $userAbonnement->setFinishedAt(
+            (new DateTimeImmutable())->modify(sprintf('+%d days', $abonnement->getDuration()))
+        );
 
-    $userPack = new UserPack();
-    $userPack->setPack($pack);
-    $userPack->setUser($user);
-    $userPack->setCredit($pack->getQuantity());
-
-    $entityManager->persist($userPack);
+    $entityManager->persist($userAbonnement);
     $entityManager->flush();
 
-    $this->addFlash('success', 'Pack acheté avec succès!');
+    $this->addFlash('success', 'Abonnement acheté avec succès!');
 
     return $this->redirectToRoute('app_account');
 
