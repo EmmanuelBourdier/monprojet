@@ -1,16 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commentaires{% endblock %}
+
+{% block body %}
 <section>
   <figure class="text-center container py-5 bg-grey mt-5">
-    <div class="justyfy-content-center display-3">Avis Clients</div>
-    {% for commentaire in commentaires %}
-      <blockquote class="blockquote">
-        <p class="mb-0">Mr {{ commentaire.nom }} {{ commentaire.prenom }}, {{ commentaire.message }}</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        <cite title="Source Title">{{ commentaire.createtAt|date('d-m-Y') }}</cite>
-      </figcaption>
-    {% endfor %}
-    <div class="my-5 mx-auto w-25 justify-content-center">
-      <button class="btn btn-lg btn-dark d-flex" type="button"><a href="{{ path('app_commentaire') }}" class="btn btn-dark my-1">Votre avis nous intéresse ! Laisser un commentaire.</a></button>
+    <div class="justify-content-center display-5 mb-5"><h1 class="tarif-title">Avis de nos clients</h1></div>
+    <div class="justify-content-end mb-2 d-flex">
+        <button class="btn btn-lg btn-primary d-flex" type="button"><a href="{{ path('app_commentaire') }}">Vous aussi, Laissez un commentaire.</a></button>
     </div>
+    {% for commentaire in commentaires %}
+      <div class="list-group my-5">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h5>
+      <small class="text-muted">{{ commentaire.createAt|date('d-m-Y') }}</small>
+    </div>
+    <p class="mb-1">{{ commentaire.message }}</p>
+  </a>
+</div>
+    {% endfor %}
+    
   </figure>
   </section>
+  {% endblock %}

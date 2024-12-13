@@ -12,7 +12,7 @@ class SectionCommentaireController extends AbstractController
 
     public function index(CommentaireRepository $commentaireRepository): Response
     {
-        return $this->render('commentaire/commentaires_liste.html.twig', [
+        return $this->render('components/section-commentaire.html.twig', [
             'controller_name' => 'SectionCommentaireController',
             'commentaires' => $commentaireRepository->findRandomVerifiedComments()
              ]

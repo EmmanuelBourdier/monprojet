@@ -25,22 +25,25 @@ class CommentaireRepository extends ServiceEntityRepository
                ->andWhere('c.verified = :val')
                ->setParameter('val', "oui")
                 ->orderBy('c.createAt', 'DESC')
-              ->setMaxResults(3)
                 ->getQuery()
                ->getResult()
          ;
        }
 
-       public function findRandomVerifiedComments(): array
+       public function findRandomVerifiedComments()
     {
-        return $this->createQueryBuilder('c')
-            ->where('c.verified = :verified')
-            ->setParameter('verified', 'oui')
-            ->orderBy('RAND()')
-            ->setMaxResults(3)
-            ->orderBy('c.createAt', 'DESC')
-            ->getQuery()
-            ->getResult();
+      $comments = $this->createQueryBuilder('c')
+      ->where('c.verified = :verified')
+      ->setParameter('verified', 'oui')
+      ->orderBy('c.createAt', 'DESC')
+      ->getQuery()
+      ->getResult();
+
+  // Shuffle the array to randomize the order
+  shuffle($comments);
+
+  // Return the first three comments
+  return array_slice($comments, 0, 3);
     }
 
     //    public function findOneBySomeField($value): ?Commentaire

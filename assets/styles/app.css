@@ -2,6 +2,11 @@ body {
     background-color: white;
 }
 
+.btn a
+{
+    text-decoration: none;
+    color: white;
+}  
 .navbar-brand{
     font-size: 35px;
     color:#3bb143;
@@ -146,6 +151,8 @@ margin-bottom: 20px;
     height: 50px;
 }
 /*************************************/
+
+
 .card-black a
 {
     text-decoration: none;
@@ -237,7 +244,11 @@ color: black;
   }
 
   .calc-cube {
+     /**retirer**
     width: 300px;
+    /* mes ajouts*/
+    width: 292px;
+     /**fin ajouts**/
     height: 300px;
   }
 
@@ -762,4 +773,61 @@ color: black;
   .form-check .form-check-input {
     float: none;
     margin-left: -1.5em;
+}
+
+
+/*Page calculateur */
+
+.pcalc {
+    padding: 30px;
+    background-color: #2DBBD9;
+}
+
+.pcalc-title {
+    font-size: calc(4rem + 1.5vw);
+    font-family: "Anton", sans-serif;
+    margin: 40px auto;
+        border: 3px solid #3bb143;;
+        border-radius: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+  }
+
+  /*section commentaire*/
+
+  .text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:300px;
+}
+
+.comment {
+    width: 360px;
+    height: 100px;
+}
+
+.comment-head{
+    height: 35px;
+}
+
+.comment-body{
+    height: 65px;
+    
+}
+
+
+/*footer*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 80px ;
+    background-color: black;
+    color:white;
 }

@@ -47,7 +47,6 @@ public function commentList( EntityManagerInterface $entityManager): Response
 {
     $commentaires = $entityManager->getRepository(Commentaire::class)->findByVerified();
 
-
     return $this->render('commentaire/commentaires_liste.html.twig', [
         'commentaires' => $commentaires,
     ]);
