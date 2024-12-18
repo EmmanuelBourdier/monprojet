@@ -2,6 +2,18 @@ body {
     background-color: white;
 }
 
+.bg-grey{
+background-color: #93a9bc;
+}
+
+.news-title{
+    display: flex;
+    font-family: "Anton",sans-serif;
+    margin: 20px auto;
+    width: 55vw;
+    justify-content: center;
+    text-align: center; 
+}
 .btn a
 {
     text-decoration: none;

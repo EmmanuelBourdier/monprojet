@@ -1,10 +1,7 @@
-<section>
-  <figure class="text-center container py-5 bg-grey mt-5">
-    <div class="justify-content-center display-5 mb-5"><h1 class="tarif-title">Actualité.</h1></div>
-    <div class="justify-content-end mb-2 d-flex">
-        <button class="btn btn-lg btn-primary d-flex" type="button"><a href="{{ path('app_commentaire') }}">Vous aussi, Laissez un commentaire.</a></button>
-    </div>
-    {% for current in new %}
+<section class="bg-grey mt-4">
+  <figure class="text-center container py-1">
+    <div class="justify-content-center mb-1"><h1 class="news-title">Actualités</h1></div>
+    {% if new  %}
       <div class="list-group my-5">
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
@@ -13,7 +10,9 @@
     </div>
     <div class="container d-flex">
         <div class="col-md-4 col-sm-12 ">
+        {% if new.image  %}
             <img class="img-fluid " src="{{ asset('build/images/'~ new.image) }}" alt="new">
+        {% endif %}    
         </div>
         <div class="col-md-8 col-sm-12 ">
             <p class="mb-1">{{ new.content }}</p>
@@ -21,7 +20,8 @@
     </div>
   </a>
 </div>
-    {% endfor %}
-    
+    {% else %}
+    <p>Pas d'actualité récente disponible.</p>
+    {% endif %}
   </figure>
   </section>
