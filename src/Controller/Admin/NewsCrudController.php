@@ -20,7 +20,7 @@ class NewsCrudController extends AbstractCrudController
         return [
             IdField::new('id')->onlyOnIndex(),
             TextField::new('title')->setLabel('titre'),
-            TextField::new('content')->setLabel('contenu')
+            TextEditorField::new('content')->setLabel('contenu')
             ->setFormTypeOptions([
                 'attr' => ['rows' => 10],
             ])

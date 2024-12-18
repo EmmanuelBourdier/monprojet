@@ -4,6 +4,7 @@
 
 {% block body %}
 {{ include("components/section-intro.html.twig")}}
+{{ render(controller('App\\Controller\\SectionNewController::currentNew')) }}
 {{ include("components/section-structures.html.twig")}}
 {{ include("components/section-calc.html.twig")}}
 {{ include("components/section-prix.html.twig")}}
