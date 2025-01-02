@@ -792,7 +792,7 @@ color: black;
 
 .pcalc {
     padding: 30px;
-    background-color: #2DBBD9;
+    /*background-color: #2DBBD9;*/
 }
 
 .pcalc-title {
@@ -806,6 +806,13 @@ color: black;
   }
 
   /*section commentaire*/
+
+  .commentaire figure
+{
+    width: 100%;
+    min-height: 350px;
+    margin: 40px auto;
+}
 
   .text-truncate-2 {
     display: -webkit-box;
@@ -833,13 +840,3 @@ color: black;
 
 /*footer*/
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    margin-top: 80px ;
-    background-color: black;
-    color:white;
-}
