@@ -8,6 +8,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 
 class ContactCrudController extends AbstractCrudController
 {
@@ -16,6 +18,11 @@ class ContactCrudController extends AbstractCrudController
         return Contact::class;
     }
 
+    public function configureActions(Actions $actions): Actions
+    {
+        return $actions
+            ->remove(Action::INDEX, Action::NEW);
+    }
     
     public function configureFields(string $pageName): iterable
     {

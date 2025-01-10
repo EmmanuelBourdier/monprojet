@@ -18,6 +18,9 @@ background-color: #93a9bc;
 {
     text-decoration: none;
     color: white;
+    /* mes ajouts
+   font-size: 1rem;
+     /**fin ajouts**/
 }  
 .navbar-brand{
     font-size: 35px;
@@ -838,5 +841,68 @@ color: black;
 }
 
 
-/*footer*/
+/* page buy */
+main.tarif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 20px auto;
+    width: 1440px;
+  }
+  
+  .tarif-proposition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 20px auto;
+    width: 1440px;
+  }
+  
+  h3.tarif {
+    font-size: 40px;
+    font-family: "Anton", sans-serif;
+    margin: 40px auto;
+  }
+  
+  .tarif-proposition p {
+    font-size: 20px;
+    margin: 20px auto;
+  }
+  
+  .tarif-section {
+    width: 100%;
+    margin: 13px;
+  }
+  
+  .tarif-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 13px;
+  }
+  
+  .tarif-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    text-align: start;
+  }
+  
+  .tarif-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .tarif-text {
+    font-size: 20px;
+    margin: 25px auto;
+  }
+  /*footer*/
 
