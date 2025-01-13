@@ -47,13 +47,10 @@ a {
 
 /* ajout 12/01*/
 .heading-2{
-    font-size: 60px;
-    font-weight: bold;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    margin-left: 130px;
+    font-family: "Anton",sans-serif;
+    font-size: 50px;
     padding-top: 50px;
+    letter-spacing: 2px;
 }
 
 .heading-3{
@@ -92,3 +89,8 @@ background-color: white;
     width: auto;
     height: 417px;
 }
+
+.img-calc {
+    height: auto;
+    margin:50px auto ;
+  }

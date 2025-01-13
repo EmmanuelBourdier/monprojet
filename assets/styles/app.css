@@ -211,23 +211,8 @@ color: black;
 }
 /*       *********************************************/
 /*section calculateur */
-.calc-title {
-    
-    font-family: "Anton", sans-serif;
-     /**retirer**
-    margin: 40px auto;
-    /* mes ajouts*/
-        border: 3px solid #3bb143;;
-        border-radius: 10px;
-        margin-left: 15px;
-        margin-right: 15px;
-  }
+
   
-  .img-calc {
-    width: 320px;
-    height: auto;
-    margin:50px auto ;
-  }
   
   .w-85 {
     width: 85%;
