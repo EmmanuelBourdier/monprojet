@@ -18,12 +18,9 @@ background-color: #93a9bc;
 {
     text-decoration: none;
     color: white;
-    /* mes ajouts
-   font-size: 1rem;
-     /**fin ajouts**/
+   
 }  
 .navbar-brand{
-    font-size: 35px;
     color:#3bb143;
     /*color:#55d737;*/
 }
@@ -51,21 +48,21 @@ ul.navbar-nav {
 /* introduction */
 
 .img-intro{
-    width: 60%;
-    height: auto;
+    width: auto;
+    height: 417px;
 }
 .intro-subtitle{
-    font-size: calc(2.5rem + .3vw);
+    
     color:gray;
 }
 
 .intro-title{
-    font-size: calc(3rem + 1.5vw);
+    
     font-family: "Anton",sans-serif; 
 }
 
 .intro-texte{
-    font-size: 18px;
+    
     margin-top: 30px;
 }
 
@@ -81,7 +78,9 @@ ul.navbar-nav {
 .structures{
 width: 100%;
 min-height: 840px;
-margin-top: 40px;
+    /* mes retirer 13/01*/
+/*margin-top: 40px;*/
+    /**fin ajouts**/
 background-image: url("../images/back-structure.jpg");
 background-repeat: none;
 background-size: cover;
@@ -213,9 +212,11 @@ color: black;
 /*       *********************************************/
 /*section calculateur */
 .calc-title {
-    font-size: calc(4rem + 1.5vw);
+    
     font-family: "Anton", sans-serif;
+     /**retirer**
     margin: 40px auto;
+    /* mes ajouts*/
         border: 3px solid #3bb143;;
         border-radius: 10px;
         margin-left: 15px;
@@ -233,7 +234,7 @@ color: black;
   }
   
   .calc-text {
-    font-size: 18px;
+  
     margin: 30px auto;
     text-align: start;
     width: 80%;
@@ -294,13 +295,13 @@ color: black;
 }
 
   .items-prix .prix {
-    font-size: 20px;
+
     font-weight: bold;
   }
 
 .prix-title{
     padding: 20px;
-    font-size: calc(2rem + 1.5vw);
+    
     font-family: "Anton",sans-serif; 
     color: black;
 
@@ -355,10 +356,10 @@ color: black;
 }
 
 .essai h3, .pack h3, .abon h3{
-    font-size: 30px;
+    
 }
 .essai p, .pack p, .abon p {
-    font-size: 18px;
+    
     margin: 15px 5px;
 }  
 .prix-link{
@@ -395,10 +396,10 @@ color: black;
         padding-top: 10px;
     } 
     .essai h3, .pack h3, .abon h3{
-        font-size: 40px;
+        
     }
     .essai p, .pack p, .abon p {
-        font-size: 24px;
+        
         margin: 15px;
     }
     .prix-text-bold{
@@ -429,7 +430,7 @@ color: black;
 
 .plaf-title{
     display: flex;
-    font-size: calc(3rem + 1.5vw);
+    
     font-family: "Anton",sans-serif;
     margin: 40px auto;
         border: 1px solid  #0D5298;
@@ -443,7 +444,7 @@ color: black;
 }
 
 .plaf-intro-texte{
-    font-size: 18px;
+    
     margin-top: 30px;
     text-align: center;
 }
@@ -467,14 +468,14 @@ color: black;
 }
 
 .plaf-subtitle{
-    font-size: calc(1.7rem + .3vw);
+    
     color:#6291bd;
     color:#0D5298;
     margin-bottom: 30px;
 }
 
 .plaf-texte{
-    font-size: 18px;
+    
     padding: 15px 0;
 }
 
@@ -501,7 +502,7 @@ color: black;
 }
 
 .plaf-cards-texte{
-    font-size: 18px;
+    
 }
 .plaf-cards-gallery{
     display: flex;
@@ -587,7 +588,7 @@ color: black;
 
 .doub-title {
     display: flex;
-    font-size: calc(3rem + 1.5vw);
+    
     font-family: "Anton",sans-serif;
     margin: 40px auto;
     border: 1px solid  #3bb143;
@@ -600,13 +601,13 @@ color: black;
 }
 
 .doub-subtitle{
-    font-size: calc(1.7rem + .3vw);
+    
     color:#3bb143;
     margin-bottom: 30px;
 }
 
 .doub-intro-text{
-    font-size: 18px;
+    
     margin-top: 30px;
     text-align: center;
 }
@@ -671,7 +672,7 @@ color: black;
 
 .cloi-title {
     display: flex;
-    font-size: calc(3rem + 1.5vw);
+    
     font-family: "Anton",sans-serif;
     margin: 40px auto;
     border: 1px solid  black;
@@ -682,13 +683,13 @@ color: black;
 }
 
 .cloi-intro-text{
-    font-size: 18px;
+    
     margin-top: 30px;
     text-align: center;
 }
 
 .cloi-subtitle{
-    font-size: calc(1.7rem + .3vw);
+    
     margin-bottom: 30px;
     color:#0D5298; 
 }
@@ -733,24 +734,7 @@ color: black;
    
 }
 
-/*test
-.container {
-    text-align: center; /* Centre le contenu horizontalement 
-    margin: 20px auto;
-}
-.image {
-    display: block;
-    margin: 0 auto; /* Centre l'image 
-    max-width: 100%; /* Gère les tailles d'image responsive 
-    height: auto;
-}
-.text {
-    margin-top: 10px; /* Ajoute un espace entre l'image et le texte 
-    font-size: 16px;
-    color: #333;
-}
-/*test*/
-/*prix*/
+
 
 .tarif{
         padding: 15px;
@@ -758,7 +742,7 @@ color: black;
 
 .tarif-title{
     display: flex;
-    font-size: calc(3rem + 1.5vw);
+    
     font-family: "Anton",sans-serif;
     margin: 40px auto;
     border: 1px solid  gray;
@@ -795,11 +779,11 @@ color: black;
 
 .pcalc {
     padding: 30px;
-    /*background-color: #2DBBD9;*/
+    
 }
 
 .pcalc-title {
-    font-size: calc(4rem + 1.5vw);
+    
     font-family: "Anton", sans-serif;
     margin: 40px auto;
         border: 3px solid #3bb143;;
@@ -861,13 +845,13 @@ main.tarif {
   }
   
   h3.tarif {
-    font-size: 40px;
+    
     font-family: "Anton", sans-serif;
     margin: 40px auto;
   }
   
   .tarif-proposition p {
-    font-size: 20px;
+    
     margin: 20px auto;
   }
   
@@ -901,7 +885,7 @@ main.tarif {
   }
   
   .tarif-text {
-    font-size: 20px;
+    
     margin: 25px auto;
   }
   /*footer*/
