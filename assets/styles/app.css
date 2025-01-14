@@ -218,12 +218,7 @@ color: black;
     width: 85%;
   }
   
-  .calc-text {
   
-    margin: 30px auto;
-    text-align: start;
-    width: 80%;
-  }
   
   .calc-liste {
     list-style-type: "- ";
@@ -244,15 +239,7 @@ color: black;
     padding-top: 20px;
   }
 
-  .calc-cube {
-     /**retirer**
-    width: 300px;
-    /* mes ajouts*/
-    width: 292px;
-     /**fin ajouts**/
-    height: 300px;
-  }
-
+ 
   /*section prix*/
 
   .prix-container {
