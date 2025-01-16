@@ -1,9 +1,8 @@
-<section class="commentaire">
-  <figure class="text-center container py-2 bg-grey mt-2">
-    <div class="justify-content-center mb-2"><h1 class="prix-title">Avis de nos clients</h1></div>
-    <div class="d-flex">
+<section class="commentaire bg-grey">
+    <div class=" d-flex align-items-center justify-content-center py-3"><h1 class="heading-2">Avis de nos clients</h1></div>
+    <div class="d-flex justify-content-between px-3">
     {% for commentaire in commentaires %}
-      <div class="list-group my-2 mx-2 comment">
+      <div class="list-group my-2 mx-2 comment d-flex ">
   <a href="{{path('app_commentaire_liste')}}" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex justify-content-between comment-head">
       <h6 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h6>
@@ -16,5 +15,4 @@
 </div>
     {% endfor %}
   </div>  
-  </figure>
   </section>
