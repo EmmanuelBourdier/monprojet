@@ -15,6 +15,18 @@ body {
     font-family: "Roboto",serif;    
 }
 
+ a.nav-link, .nav-item button{
+    color:white !important;
+}
+ 
+a.nav-link:hover,.nav-item button:hover{
+    color:#89ade0 !important;
+}
+
+.nav-item button img {
+    padding-left: 20px;
+}
+
 .section-intro{
     
 }
