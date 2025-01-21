@@ -1,5 +1,4 @@
 html, body {
-    margin: 0 auto !important;
     padding: 0 !important;
     width: 100%;
     height: 100%;
@@ -13,6 +12,13 @@ body {
     width: 1440px;
     margin:0 auto;
     font-family: "Roboto",serif;    
+}
+
+
+.navbar-brand{
+    font-size: 35px !important;
+    margin-left: 80px;
+    color:#3bb143;
 }
 
  a.nav-link, .nav-item button{
