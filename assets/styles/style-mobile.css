@@ -1,7 +1,8 @@
-@media (max-width: 430px){
+@media (max-width: 480px){
 
     body { 
        width: 100%;
+       background-color: white !important; 
     }
 
     .navbar-brand{
@@ -10,13 +11,34 @@
     }
     
     .dropdown-menu.show {
-        left:-30px !important;
+        left:-90px !important;
         
     }
     .dropdown-toggle{
         left:30px !important;
     }
 
+    ul.navbar-nav {
+        margin-right: 10px !important;
+    }
+     
+    .section-intro{
+        margin-top: 0 !important;
+    }
+    
+    section.gray-blue{
+        background-color: white !important; 
+    }
 
+    .section-intro .row .flex-column {
+        text-align: center;
+    }
 
+    .img-calc {
+        width:100%;
+    }
+
+    #comments  {
+        flex-wrap: wrap;
+    }
 }
