@@ -767,7 +767,7 @@ color: black;
 
   /*section commentaire*/
 
-  .commentaire figure
+  .commentaire 
 {
     width: 100%;
     min-height: 350px;

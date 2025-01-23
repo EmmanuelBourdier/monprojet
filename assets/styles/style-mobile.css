@@ -30,8 +30,29 @@
         background-color: white !important; 
     }
 
-    .section-intro .row .flex-column {
+    #intro{
+        padding-left: 0 !important;
         text-align: center;
+        align-items: center;
+    }
+
+    #intro-2{
+        padding-right: 0 !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    .img-intro {
+        width: 390px;
+        height: auto;
+    }
+
+    p {
+        
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
     }
 
     .img-calc {
@@ -41,4 +62,9 @@
     #comments  {
         flex-wrap: wrap;
     }
+
+
+
+
+
 }
