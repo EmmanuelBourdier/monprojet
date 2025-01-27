@@ -1,18 +1,21 @@
-<section class="commentaire bg-grey">
-    <div class=" d-flex align-items-center justify-content-center py-3"><h1 class="heading-2">Avis de nos clients</h1></div>
-    <div class="d-flex justify-content-between px-3" id="comments">
+<section class=" bg-green" id="comments">
+      <h1 class="heading-2">Avis de nos clients</h1>
     {% for commentaire in commentaires %}
-      <div class="list-group my-2 mx-2 comment d-flex ">
-  <a href="{{path('app_commentaire_liste')}}" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex justify-content-between comment-head">
-      <h6 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h6>
-      <small class="text-muted">{{ commentaire.createAt|date('d-m-Y') }}</small>
-    </div>
-    <div class="comment-body">
-    <p class="mb-1  text-truncate-2 text-start mt-2" >{{ commentaire.message }}</p>
-    </div>
-  </a>
-</div>
+      {% if commentaire %}
+      <div class="comments">
+        <a href="{{ path('app_commentaire_liste') }}">
+        <div class="d-flex w-100 justify-content-between">
+          <h6 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h6>     
+          <p class="text-muted">{{ commentaire.createAt|date('d-m-Y') }}</p>
+        </div>
+        <div class="comment-body">
+          <p class="mb-1  text-truncate-2 text-start mt-2" >{{ commentaire.message }}</p>
+        </div>
+        </a>
+      </div>
+      {% else %}
+        <p>Pas de commentaire récent disponible.</p>
+      {% endif %}
     {% endfor %}
   </div>  
   </section>

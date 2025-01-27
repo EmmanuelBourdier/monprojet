@@ -2,6 +2,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/app.css';
 import './styles/style.css';
+import './styles/style-tablet.css';
 import './styles/style-mobile.css'
 // Import Bootstrap JavaScript
 import '@popperjs/core'
