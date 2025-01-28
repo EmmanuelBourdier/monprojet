@@ -50,6 +50,14 @@
       flex-wrap: wrap !important;
     }
   
+    .heading-1 {
+        font-size: 50px;
+      }
+      
+      .sub-heading-1 {
+        font-size: 25px;
+      }
+
     section.gray-blue {
       background-color: white !important;
     }
@@ -113,7 +121,7 @@
   
     #news,
     #comments {
-      padding: 20px 0 !important;
+      padding: 35px 0 !important;
     }
   
     .news h5,

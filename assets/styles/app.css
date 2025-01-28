@@ -103,7 +103,7 @@ max-width: 659px;
         flex-direction: column;
         background-image: none;
         background-color: #3bb143;
-        background-color: #007a33;
+        /*background-color: #007a33;*/
         height: auto;
         margin-top: 0px;
     }

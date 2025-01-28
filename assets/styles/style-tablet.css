@@ -27,14 +27,20 @@
         padding-left: 0px;
         margin: 0px auto;
       }
+
+      .heading-1 {
+        font-size: 50px;
+      }
+      
+      .sub-heading-1 {
+        font-size: 30px;
+      }
     }
   
     .header-logo {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding-left: 10px;
     }
   
     .logo-mobile,
