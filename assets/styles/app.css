@@ -3,7 +3,8 @@ body {
 }
 
 .bg-grey{
-background-color: #93a9bc;
+background-color: #a5b5d1;
+ /*avant #93a9bc;*/
 }
 
 .news-title{
@@ -17,8 +18,9 @@ background-color: #93a9bc;
 .btn a
 {
     text-decoration: none;
-    color: white;
-   
+    /* mes ajouts*************************************************/
+    color:black;
+    /**fin ajouts**  avant color: white;*/  
 }  
 
 .navbar-brand{

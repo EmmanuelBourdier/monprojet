@@ -5,22 +5,21 @@
 {% block body %}
 <section>
   <figure class="text-center container py-5 bg-grey mt-5">
-    <div class="justify-content-center display-5 mb-5"><h1 class="tarif-title">Avis de nos clients</h1></div>
-    <div class="justify-content-end mb-2 d-flex">
-        <button class="btn btn-lg btn-primary d-flex" type="button"><a href="{{ path('app_commentaire') }}">Vous aussi, Laissez un commentaire.</a></button>
+    <div class="justify-content-center display-5 mb-5"><h1 class="heading-2">Avis de nos clients</h1></div>
+    <div class="justify-content-end mb-2 d-flex pe-5">
+        <button class="btn btn-lg btn-primary d-flex " type="button"><a href="{{ path('app_commentaire') }}">Donnez votre avis</a></button>
     </div>
     {% for commentaire in commentaires %}
-      <div class="list-group my-5">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h5>
+      <div class=" m-5 bg-light py-4 px-5 rounded-2">
+    <div class="d-flex w-100 justify-content-between ">
+      <h5 class="mb-3">{{ commentaire.nom }} {{ commentaire.prenom }}</h5>
       <small class="text-muted">{{ commentaire.createAt|date('d-m-Y') }}</small>
     </div>
-    <p class="mb-1">{{ commentaire.message }}</p>
-  </a>
+    <p class="mb-1 text-start ">{{ commentaire.message }}</p>
 </div>
     {% endfor %}
     
   </figure>
   </section>
   {% endblock %}
+  

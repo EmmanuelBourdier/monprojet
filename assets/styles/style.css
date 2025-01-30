@@ -19,6 +19,11 @@ body {
   font-family: "Roboto", serif;
 }
 
+.btn.btn-primary {
+    background-color:#83bcFc;
+    color:black;
+}
+
 .header-logo {
   display: flex;
   flex-wrap: nowrap;
@@ -188,6 +193,9 @@ a {
 #comments h1 {
   width: 100%;
   text-align: center;
+  /* mes ajouts******************************/
+  margin-bottom: 50px;
+  /**fin ajouts**/
 }
 
 .bg-green {
