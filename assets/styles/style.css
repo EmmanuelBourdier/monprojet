@@ -204,6 +204,14 @@ a {
 
 /*tarif,buy*/
 
+main.tarif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 20px auto;
+}
+
 .tarif-intro{
     display: flex;
     flex-direction: column;
@@ -211,4 +219,23 @@ a {
     justify-content: flex-start;
     padding: 10px 30px;
     width: 90%; 
+}
+
+.card-header, .card-footer{
+  display:flex ;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header img{
+  width: 80%;
+  height: auto;
+}
+
+.card-body{
+  min-height: 223px;
+}
+
+.list-comment{
+  width: 100%;
 }

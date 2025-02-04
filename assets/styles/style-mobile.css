@@ -8,12 +8,10 @@
       flex-basis: 50% !important;
       flex-grow: 0 !important;
       justify-content: center !important;
-      margin: 0 auto; /* Center the navbar-collapse */
+      margin: 0 auto; /* Center the navbar-collapse*/ 
     }
-  
-    .navbar.navbar-expand.navbar-first {
-      height: 150px;
-    }
+ 
+    
   
     .header-logo {
       display: flex;
