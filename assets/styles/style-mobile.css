@@ -136,3 +136,10 @@
       margin-bottom: 20px;
     }
   }
+
+  @media (max-width: 740px){
+    #btn-comment{
+      justify-content: center !important;
+      padding-right: 0px !important;
+    }
+  }

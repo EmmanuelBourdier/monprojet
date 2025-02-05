@@ -22,31 +22,34 @@ class CommentaireType extends AbstractType
             ->add('nom', TextType::class, [
                 'label' => 'Nom',
                 'required'=>false,
-                'constraints' => [new Length(['min' => 2, 'max' => 30]) ],
+                'constraints' => [new Length(['min' => 2, 'max' => 30,'minMessage' => 'Le nom doit comporter au moins {{ limit }} caractères.',
+                        'maxMessage' => 'Le nom ne peut pas dépasser {{ limit }} caractères.',]) ],
                 'attr' => [
-                    'placeholder' => 'Saisir votre Nom (optionnel)'
+                    'placeholder' => 'Optionnel'
                 ]
             ])
             ->add('prenom', TextType::class, [
                 'label' => 'Prénom',
                 'required'=>false,
-                'constraints' => [new Length(['min' => 2, 'max' => 30]) ],
+                'constraints' => [new Length(['min' => 2, 'max' => 30,'minMessage' => 'Le prénom doit comporter au moins {{ limit }} caractères.',
+                        'maxMessage' => 'Le prénom ne peut pas dépasser {{ limit }} caractères.',]) ],
                 'attr' => [
-                    'placeholder' => 'Saisir votre Prénom (optionnel)'
+                    'placeholder' => 'Optionnel'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'required'=>false,
                 'label' => 'Email',
                 'attr' => [
-                    'placeholder' => 'Saisir votre Email (optionnel)'
+                    'placeholder' => 'Optionnel'
                 ]
             ])
             ->add('message', TextareaType::class, [
+                'required'=>false,
                 'label' => 'Message',
-                'constraints' => [new NotBlank()],
+                'constraints' => [new NotBlank(["message"=>'Le message ne peut pas être vide'])],
                 'attr' => [
-                    'placeholder' => 'saisir votre message'
+                    'placeholder' => 'Donnez vôtre avis'// avant: saisir votre message
                 ]
             ])
             ->add('submit', SubmitType::class, [

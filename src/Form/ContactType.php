@@ -21,27 +21,33 @@ class ContactType extends AbstractType
         $builder
             ->add('nom', TextType::class, [
                 'label' => 'Nom',
-                'constraints' => [new Length(['min' => 2, 'max' => 30])],
+                'required'=>false,
+                'constraints' => [new Length(['min' => 2, 'max' => 30,'minMessage' => 'Le nom doit comporter au moins {{ limit }} caractères.',
+                'maxMessage' => 'Le nom ne peut pas dépasser {{ limit }} caractères.',])],
                 'attr' => [
                     'placeholder' => 'saisir votre Nom '
                 ]
             ])
             ->add('prenom', TextType::class, [
                 'label' => 'Prénom',
-                'constraints' => [new Length(['min' => 2, 'max' => 30])],
+                'required'=>false,
+                'constraints' => [new Length(['min' => 2, 'max' => 30,'minMessage' => 'Le prénom doit comporter au moins {{ limit }} caractères.',
+                'maxMessage' => 'Le prénom ne peut pas dépasser {{ limit }} caractères.',])],
                 'attr' => [
                     'placeholder' => 'saisir votre Prénom '
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Email',
+                'required'=>false,
+                'constraints' => [new NotBlank(["message"=>"L'email ne peut pas être vide"])],
                 'attr' => [
                     'placeholder' => 'Saisir votre Email'
                 ]
             ])
             ->add('message', TextareaType::class, [
                 'label' => 'Message',
-                'constraints' => [new NotBlank()],
+                'constraints' => [new NotBlank(["message"=>'Le message ne peut pas être vide'])],
                 'attr' => [
                     'placeholder' => 'saisir votre message'
                 ]

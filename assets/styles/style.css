@@ -9,6 +9,20 @@ a{
   color: black;  
 }
 
+::placeholder {
+  font-size: 12px;
+  color: #d3d3d3; /* light grey color */
+  opacity: 1; /* Ensure the color is not transparent */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #d3d3d3;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #d3d3d3;
+}
+
 html {
   font-size: 18px;
 }
