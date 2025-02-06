@@ -8,10 +8,12 @@
          <div class="form-group">
                 {{ form_label(form.lastname) }}
                 {{ form_widget(form.lastname, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.lastname) }}
             </div>
              <div class="form-group">
                 {{ form_label(form.firstname) }}
                 {{ form_widget(form.firstname, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.firstname) }}
             </div>
             <div class="form-group">
                 {{ form_label(form.email) }}

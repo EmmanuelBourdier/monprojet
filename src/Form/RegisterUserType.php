@@ -12,6 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
@@ -21,16 +22,35 @@ class RegisterUserType extends AbstractType
     {
         $builder
         ->add('lastname', TextType::class, [
-            'label' => 'Nom', 'attr' => ['placeholder' => 'Entrez votre nom']
+            'label' => 'Nom',
+            'required'=>false,
+                'constraints' => [new NotBlank(["message"=>"Le nom ne peut pas être vide."]), 
+                new Length(['min' => 2, 'max' => 30,'minMessage' => 'Le nom doit comporter au moins {{ limit }} caractères.',
+                        'maxMessage' => 'Le nom ne peut pas dépasser {{ limit }} caractères.',]) ],
+                
+             'attr' => ['placeholder' => 'Entrez votre nom']
         ])
         ->add('firstname', TextType::class, [
-            'label' => 'Prénom', 'attr' => ['placeholder' => 'Entrez votre prénom']
+            'label' => 'Prénom',
+            'required'=>false,
+                'constraints' => [new NotBlank(["message"=>"Le prénom ne peut pas être vide."]), 
+                new Length(['min' => 2, 'max' => 30,'minMessage' => 'Le prénom doit comporter au moins {{ limit }} caractères.',
+                        'maxMessage' => 'Le prénom ne peut pas dépasser {{ limit }} caractères.',]) ],
+                
+            'attr' => ['placeholder' => 'Entrez votre prénom']
         ])
         ->add('email', EmailType::class, [
-            'label' => 'Adresse email', 'attr' => ['placeholder' => 'Entrez votre adresse email']
+            'label' => 'Adresse email',
+            'required'=>false,
+            'constraints' => [new NotBlank(["message"=>"L'email ne peut pas être vide."]),
+            new Email([
+                'message' => 'L\'adresse email "{{ value }}" n\'est pas une adresse email valide.',
+            ]),],   
+            'attr' => ['placeholder' => 'Entrez votre adresse email']
         ])
         ->add('plainPassword', RepeatedType::class, [
             'type' => PasswordType::class,
+            'required'=>false,
             'constraints' => [
                     new NotBlank([
                         'message' => 'Veuillez entrer un mot de passe',
@@ -44,7 +64,7 @@ class RegisterUserType extends AbstractType
                 ],
             'first_options'  => [
                 'label' => 'Mot de passe',
-                'attr' => ['placeholder' => 'Entrez votre mot de passe',"id"=>"password"],
+                'attr' => ['placeholder' => 'Entrez votre mot de passe (6 caractères minimum)',"id"=>"password"],
                 'hash_property_path' => 'password'
             ],
             'second_options' => [

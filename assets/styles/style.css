@@ -33,6 +33,13 @@ body {
   font-family: "Roboto", serif;
 }
 
+.login-error{
+  color: red;
+  text-align: center;
+   width: 100%;
+  font-size: 20px;
+}
+
 .btn.btn-primary {
     background-color:#83bcFc;
     color:black;
@@ -40,10 +47,10 @@ body {
 
 .header-logo {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
   color: white;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
   padding-top: 20px;
 }
 
@@ -59,6 +66,10 @@ body {
 .logo {
   font-size: 35px !important;
   color: #3bb143;
+}
+
+.logo-mobile{
+ margin-bottom: 0px;
 }
 
 a.nav-link,

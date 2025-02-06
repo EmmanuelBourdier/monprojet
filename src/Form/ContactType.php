@@ -40,7 +40,7 @@ class ContactType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'required'=>false,
-                'constraints' => [new NotBlank(["message"=>"L'email ne peut pas être vide"])],
+                'constraints' => [new NotBlank(["message"=>"L'email ne peut pas être vide."])],
                 'attr' => [
                     'placeholder' => 'Saisir votre Email'
                 ]

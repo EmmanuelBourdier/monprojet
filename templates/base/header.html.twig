@@ -2,7 +2,9 @@
     <nav class="navbar navbar-expand navbar-first bg-dark" data-bs-theme="dark">
         <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="header-logo">
-            <a class="logo" href="{{ path('app_home') }}"><p class="logo-mobile">Quanti Plaque</p></a>
+            <a class="logo" href="{{ path('app_home') }}">
+            <p class="logo-mobile">Quanti Plaque</p>
+            </a>
             {% if app.user %} 
               <p class="paraph-mobile"> Vous êtes connecté</p>
             {% endif %}
