@@ -14,9 +14,9 @@
     </div>
     {% for commentaire in commentaires %}
       <div class=" m-5 bg-light py-4 px-5 rounded-2">
-        <div class="d-flex w-100 justify-content-between ">
-          <h5 class="mb-3">{{ commentaire.nom }} {{ commentaire.prenom }}</h5>
-          <small class="text-muted">{{ commentaire.createAt|date('d-m-Y') }}</small>
+        <div class="d-flex w-100 justify-content-between flex-wrap mb-3">
+          <h5 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h5>
+          <small class="text-muted mb-1">{{ commentaire.createAt|date('d-m-Y') }}</small>
         </div>
         <p class="mb-1 text-start ">{{ commentaire.message }}</p>
       </div>

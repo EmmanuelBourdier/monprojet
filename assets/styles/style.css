@@ -143,6 +143,14 @@ a {
 .heading-text {
   font-size: 22px;
   margin-top: 30px;
+  padding: 0 10px;
+}
+
+/*structure*/
+
+.structure-subtitle{
+  color:#0D5298;
+  margin-bottom: 30px;
 }
 
 .gray-blue {

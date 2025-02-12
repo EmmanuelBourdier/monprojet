@@ -299,12 +299,14 @@ color: black;
 }
 
 .prix-cube.pack {
-    background-color:  #2DBBD9; 
+    background-color:  #2DBBD9;
+    background-color:#83bcfc 
 }
 
 .prix-cube.essai{
    
     background-color: #3bb143;
+    background-color:#789e54
 }
 
 .prix-text-bold-ess { 

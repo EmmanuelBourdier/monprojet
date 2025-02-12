@@ -142,4 +142,10 @@
       justify-content: center !important;
       padding-right: 0px !important;
     }
+    #btn-contact{
+      display: flex;
+      justify-content: center;
+    }
   }
+
+  

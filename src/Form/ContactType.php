@@ -51,10 +51,8 @@ class ContactType extends AbstractType
                 'attr' => [
                     'placeholder' => 'saisir votre message'
                 ]
-            ])
-            ->add('submit', SubmitType::class, [
-                'label' => "Envoyer"
-            ]);
+                ]);
+            
     }
 
     public function configureOptions(OptionsResolver $resolver): void
