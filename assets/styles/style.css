@@ -4,6 +4,16 @@ body {
   height: 100%;
 }
 
+.bg-gris{
+background-color: rgba(243, 242, 242, 0.748);
+border-radius: 10px;
+padding: 16px;
+ }
+
+ .card-reduced{
+  max-height: 450px;
+ }
+
 a{
   text-decoration: none;
   color: black;  
