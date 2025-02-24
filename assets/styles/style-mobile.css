@@ -1,3 +1,16 @@
+@media (max-width: 1190px) {
+#plaf-four-1,#plaf-mont-1,#plaf-oss-1{
+  margin-left: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+#plaf-four-2,#plaf-mont-2,#plaf-oss-2{
+  margin-right: 0px !important;
+}
+}
+
+
+
 @media (max-width: 910px) {
     body {
       width: 100%;
@@ -132,9 +145,12 @@
       height: auto;
       padding-bottom: 40px;
     }
+
     .comment {
       margin-bottom: 20px;
     }
+
+    
   }
 
   @media (max-width: 740px){
@@ -146,6 +162,7 @@
       display: flex;
       justify-content: center;
     }
+
   }
 
   
