@@ -7,6 +7,23 @@
 #plaf-four-2,#plaf-mont-2,#plaf-oss-2{
   margin-right: 0px !important;
 }
+
+.tabplaf {
+  width: 98vw;
+  font-size: 10px;
+}
+
+ #div-table{
+  margin: 20px 5px !important;
+  padding: 10px 0px !important;
+}
+
+#card-table{
+  overflow-x:hidden ;
+  padding: 10px 0px !important;
+  text-align: center;
+}
+
 }
 
 

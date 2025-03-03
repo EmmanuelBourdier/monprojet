@@ -6,8 +6,8 @@ body {
 
 .bg-gris{
 background-color: rgba(243, 242, 242, 0.748);
-border-radius: 10px;
-padding: 16px;
+border-radius: 0px;/*border-radius: 10px*/
+padding: 0px; /*pading de 16px*/
  }
 
  .card-reduced{
@@ -123,7 +123,6 @@ a {
   font-weight: bold;
 }
 
-/* ajout 12/01*/
 .heading-2 {
   font-family: "Anton", sans-serif;
   font-size: 50px;
@@ -139,8 +138,6 @@ a {
   justify-content: center;
   padding-top: 20px;
 }
-
-/*fin ajout 12/01*/
 
 .grey {
   color: gray;
@@ -281,4 +278,16 @@ main.tarif {
 
 .list-comment{
   width: 100%;
+}
+
+/*infotech*/
+
+.tabplaf{
+ height: auto;
+ width: 1200px;
+ margin: 0 auto;
+}
+
+.tabplaf tr{
+   border-bottom: 1px solid grey;   
 }
