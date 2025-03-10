@@ -8,6 +8,7 @@ use App\Entity\Contact;
 use App\Entity\News;
 use App\Entity\UserAbonnement;
 use App\Entity\UserPack;
+use App\Entity\Pack;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -48,10 +49,12 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-list', User::class);
+        yield MenuItem::linkToCrud('Packs', 'fas fa-list', Pack::class);
         yield MenuItem::linkToCrud('Commentaires', 'fas fa-list', Commentaire::class);
         yield MenuItem::linkToCrud('Contact', 'fas fa-list', Contact::class);
         yield MenuItem::linkToCrud('Actualités', 'fas fa-list', News::class);
-        yield MenuItem::linkToCrud('Abonnements', 'fas fa-list', UserAbonnement::class);
-        yield MenuItem::linkToCrud('Packs', 'fas fa-list', UserPack::class);
+        yield MenuItem::linkToCrud('Souscription Abonnements', 'fas fa-list', UserAbonnement::class);
+        yield MenuItem::linkToCrud('Achat Packs', 'fas fa-list', UserPack::class);
+        
     }
 }

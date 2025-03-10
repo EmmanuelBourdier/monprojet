@@ -8,9 +8,6 @@
   margin-right: 0px !important;
 }
 
-.tabplaf {
-  width: 100%;
-}
 
  #div-table{
   margin: 20px 5px !important;
@@ -169,6 +166,12 @@
     
   }
 
+  @media (max-width: 793px){
+    .tabplaf {
+      width: 100%;
+    }
+  }
+
   @media (max-width: 740px){
     #btn-comment{
       justify-content: center !important;
@@ -178,6 +181,9 @@
       display: flex;
       justify-content: center;
     }
+
+    
+    
 
   }
 

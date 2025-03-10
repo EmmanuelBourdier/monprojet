@@ -36,7 +36,7 @@ class CreatePackCommand extends Command
         $io = new SymfonyStyle($input, $output);
 
         $packs = [
-            ['name' => 'One', 'quantity' => 1, 'price' => 1.5],
+            ['name' => 'One', 'quantity' => 1, 'price' => 2.0],
             ['name' => 'Three', 'quantity' => 3, 'price' => 5.0],
             ['name' => 'Ten', 'quantity' => 10, 'price' => 10.0],
         ];
