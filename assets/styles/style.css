@@ -261,6 +261,10 @@ main.tarif {
     width: 90%; 
 }
 
+#tarif{
+  flex-wrap: wrap;
+}
+
 .card-header, .card-footer{
   display:flex ;
   align-items: center;
@@ -298,3 +302,5 @@ main.tarif {
 .tr-center{
  text-align: center;
 }
+
+/*achat du pack */

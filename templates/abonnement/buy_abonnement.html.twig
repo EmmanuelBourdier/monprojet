@@ -32,17 +32,17 @@
         <div class="prix-liste">
             <div class="items-prix">
                 
-                <p>une semaine <br><span class="prix">1.5 €</span></p>
+                <p>une semaine <br><span class="prix">{{abonnements[0].price}} €</span></p>
                 {{ form_widget(form.abonnement.0) }}
             </div>
             <div class="items-prix">
                
-                <p>1 mois <br><span class="prix">5 €</span></p>
+                <p>1 mois <br><span class="prix">{{abonnements[1].price}} €</span></p>
                  {{ form_widget(form.abonnement.1) }}
             </div>
             <div class="items-prix">
                 
-                <p>6 mois <br><span class="prix">10 €</span></p>
+                <p>6 mois <br><span class="prix">{{abonnements[2].price}} €</span></p>
                 {{ form_widget(form.abonnement.2) }}
             </div>
             </div>

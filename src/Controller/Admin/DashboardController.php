@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Abonnement;
 use App\Entity\User;
 use App\Entity\Commentaire;
 use App\Entity\Contact;
@@ -50,6 +51,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-list', User::class);
         yield MenuItem::linkToCrud('Packs', 'fas fa-list', Pack::class);
+        yield MenuItem::linkToCrud('Abonnements', 'fas fa-list', Abonnement::class);
         yield MenuItem::linkToCrud('Commentaires', 'fas fa-list', Commentaire::class);
         yield MenuItem::linkToCrud('Contact', 'fas fa-list', Contact::class);
         yield MenuItem::linkToCrud('Actualités', 'fas fa-list', News::class);

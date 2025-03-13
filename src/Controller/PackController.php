@@ -90,6 +90,8 @@ public function buyPack(Request $request, EntityManagerInterface $entityManager,
         }
     }
 
+    $packs=$entityManager->getRepository(Pack::class)->findAll();
+
     $form = $this->createForm(BuyPackType::class);
     $form->handleRequest($request);
 
@@ -102,7 +104,7 @@ public function buyPack(Request $request, EntityManagerInterface $entityManager,
         return $this->redirectToRoute('app_pack_summary', ['packId' => $packId]);
     }
 
-    return $this->render('pack/buy_pack.html.twig', ['form' => $form->createView()]);
+    return $this->render('pack/buy_pack.html.twig', ['form' => $form->createView(),'packs'=>$packs]);
 }
 
 #[Route('/acheter-pack/resume', name: 'app_pack_summary')]

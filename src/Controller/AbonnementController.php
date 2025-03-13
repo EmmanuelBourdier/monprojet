@@ -89,6 +89,9 @@ public function buyAbonnement(Request $request, EntityManagerInterface $entityMa
         }
     }
 
+    $abonnements=$entityManager->getRepository(Abonnement::class)->findAll();
+
+
     $form = $this->createForm(BuyAbonnementType::class);
     $form->handleRequest($request);
 
@@ -101,7 +104,7 @@ public function buyAbonnement(Request $request, EntityManagerInterface $entityMa
         return $this->redirectToRoute('app_abonnement_summary', ['abonnementId' => $abonnementId]);
     }
 
-    return $this->render('abonnement/buy_abonnement.html.twig', ['form' => $form->createView()]);
+    return $this->render('abonnement/buy_abonnement.html.twig', ['form' => $form->createView(), 'abonnements'=>$abonnements]);
 }
 
 #[Route('/acheter-abonnement/resume', name: 'app_abonnement_summary')]

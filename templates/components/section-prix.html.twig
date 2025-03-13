@@ -11,7 +11,8 @@
         <div class="prix-cube pack d-flex flex-column ">
                 <div class="prix-header">
                     <h3 class="py-2" >Packs </h3>
-                    <p class="prix-text">Payez en une fois de 1 à 10 calculs. </p>
+                    <p class="prix-text">Solutions idéales pour vos calculs
+                    {#Payez en une fois pour 1 à 10 calculs.#}</p>
                 </div>
                 <a href="{{ path('app_buy') }}" class="prix-link" >
                 <div class="prix-liste">
@@ -28,9 +29,9 @@
                 </div>
                 <a href="{{ path('app_buy') }}" class="prix-link" >
                 <div class="prix-liste">
-                    <div class="items-prix"><p>1 semaine<br><span class="prix">20 €</span></p></div>
-                    <div class="items-prix"><p> 1 mois <br><span class="prix">50 €</span></p></div>
-                    <div class="items-prix"><p>6 mois <br><span class="prix">250 €</span></p></div>
+                    <div class="items-prix"><p>1 semaine<br><span class="prix">{{abonnements[0].price}} €</span></p></div>
+                    <div class="items-prix"><p> 1 mois <br><span class="prix">{{abonnements[1].price}} €</span></p></div>
+                    <div class="items-prix"><p>6 mois <br><span class="prix">{{abonnements[2].price}} €</span></p></div>
                 </div>
                 </a>
         </div>
